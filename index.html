@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viguru24 • Sovereign & Native Software Suite</title>
+  <meta name="description" content="High-performance, privacy-first, GPU-accelerated applications for Android, Windows, and macOS. Vixz YouTube Player, Cosmo Symphony, CosmoWhisper, and Kin-Tracker." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              red: '#FF0033',
+              purple: '#8B5CF6',
+              cyan: '#06B6D4',
+              emerald: '#10B981',
+              dark: '#0B0F17',
+              card: 'rgba(17, 24, 39, 0.75)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #07090E;
+      color: #F3F4F6;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+    
+    .glass-card {
+      background: rgba(18, 24, 38, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .glass-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+    }
+
+    .glow-bg {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .shimmer {
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+  </style>
+</head>
+<body class="relative min-h-screen selection:bg-purple-500 selection:text-white">
+
+  <!-- Ambient Background Glows -->
+  <div class="glow-bg bg-purple-600 top-[-100px] left-[-100px]"></div>
+  <div class="glow-bg bg-blue-600 top-[30%] right-[-100px]"></div>
+  <div class="glow-bg bg-red-600 bottom-[-100px] left-[20%]"></div>
+
+  <!-- Top Navigation -->
+  <nav class="sticky top-0 z-50 glass-panel border-b border-white/5 py-4 px-6 md:px-12 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-purple-600 via-indigo-500 to-pink-500 flex items-center justify-center font-bold text-lg shadow-lg shadow-purple-500/30">
+        V
+      </div>
+      <div>
+        <span class="font-extrabold text-lg tracking-tight text-white">Viguru24</span>
+        <span class="hidden sm:inline text-xs text-purple-400 font-mono ml-2 px-2 py-0.5 rounded-full bg-purple-500/10 border border-purple-500/20">Sovereign Suite</span>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <a href="#apps" class="text-sm font-medium text-gray-300 hover:text-white transition">Apps</a>
+      <a href="#matrix" class="hidden sm:inline text-sm font-medium text-gray-300 hover:text-white transition">Comparison</a>
+      <a href="https://github.com/Viguru24" target="_blank" class="flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span>GitHub Profile</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative z-10 max-w-5xl mx-auto pt-20 pb-16 px-6 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 border border-purple-500/30 text-purple-300 text-xs font-semibold uppercase tracking-wider mb-6">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      100% Free • Open Source • Privacy-First
+    </div>
+
+    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight sm:leading-none mb-6">
+      High-Performance Native Apps. <br/>
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-amber-300">
+        Zero Cloud Subscriptions.
+      </span>
+    </h1>
+
+    <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+      Engineered for Android, Windows, and macOS. GPU-accelerated video players, local on-device AI transcription, media studio orchestration, and private family radars.
+    </p>
+
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="#apps" class="px-8 py-3.5 rounded-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white shadow-xl shadow-purple-600/30 transition transform hover:-translate-y-0.5">
+        Explore Apps & Downloads
+      </a>
+      <a href="https://github.com/Viguru24" target="_blank" class="px-8 py-3.5 rounded-xl font-semibold bg-white/5 hover:bg-white/10 border border-white/10 text-gray-200 transition">
+        View on GitHub
+      </a>
+    </div>
+  </header>
+
+  <!-- Apps Grid Section -->
+  <section id="apps" class="relative z-10 max-w-6xl mx-auto py-12 px-6">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Featured Applications</h2>
+        <p class="text-gray-400 text-sm mt-1">Download native installers and APKs directly from verified GitHub releases.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- App 1: Vixz YouTube Player -->
+      <div class="glass-card rounded-2xl p-7 flex flex-col justify-between border-t border-t-red-500/30">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-red-600/20 border border-red-500/30 flex items-center justify-center text-2xl">
+                🎬
+              </div>
+              <div>
+                <h3 class="font-extrabold text-xl text-white">Vixz YouTube Player</h3>
+                <span class="text-xs font-mono text-red-400">Android APK • v1.9.6</span>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20">
+              Top Download
+            </span>
+          </div>
+
+          <p class="text-gray-300 text-sm mb-5 leading-relaxed">
+            Ultra-fast, 100% ad-free Android YouTube client with automatic SponsorBlock skipping, Gemini AI video summaries, 12-language live switching, discrete speed controls, and background PiP.
+          </p>
+
+          <div class="grid grid-cols-2 gap-2 text-xs text-gray-400 mb-6 font-mono">
+            <div class="flex items-center gap-1.5">⚡ 0ms SWR Startup</div>
+            <div class="flex items-center gap-1.5">🛡️ 0% Ad Load</div>
+            <div class="flex items-center gap-1.5">🤖 Gemini Summaries</div>
+            <div class="flex items-center gap-1.5">🌍 12 Languages</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
+          <a href="https://github.com/Viguru24/YouTube/releases/download/v1.9.6/Vixz-YouTube-Player-v1.9.6.apk" class="flex-1 min-w-[140px] text-center font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl bg-red-600 hover:bg-red-500 text-white shadow-lg shadow-red-600/25 transition">
+            📥 Download APK (31 MB)
+          </a>
+          <a href="https://apps.obtainium.imranr.dev/add?r=https://github.com/Viguru24/YouTube" class="text-xs font-semibold py-3 px-4 rounded-xl bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 border border-purple-500/30 transition">
+            ⚡ Obtainium Auto-Update
+          </a>
+          <a href="https://github.com/Viguru24/YouTube" target="_blank" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- App 2: Cosmo Symphony Studio -->
+      <div class="glass-card rounded-2xl p-7 flex flex-col justify-between border-t border-t-blue-500/30">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-2xl">
+                🌌
+              </div>
+              <div>
+                <h3 class="font-extrabold text-xl text-white">Cosmo Symphony</h3>
+                <span class="text-xs font-mono text-blue-400">Windows MSIX • Rust + Tauri v2</span>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-semibold border border-blue-500/20">
+              GPU Studio
+            </span>
+          </div>
+
+          <p class="text-gray-300 text-sm mb-5 leading-relaxed">
+            GPU-accelerated multi-media orchestrator with a 50+ item mosaic wall, authentic hardwood photo framing studio, 4K/8K local AI upscaling, and zero-cloud phone-to-PC Wi-Fi sharing.
+          </p>
+
+          <div class="grid grid-cols-2 gap-2 text-xs text-gray-400 mb-6 font-mono">
+            <div class="flex items-center gap-1.5">🦀 Rust Core</div>
+            <div class="flex items-center gap-1.5">🖼️ Hardwood Framing</div>
+            <div class="flex items-center gap-1.5">🔍 4K/8K AI Upscale</div>
+            <div class="flex items-center gap-1.5">📡 Phone-to-PC Wi-Fi</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
+          <a href="https://github.com/Viguru24/Video/releases/download/v1.4.0/Cosmo.Symphony_1.4.0.0.msixbundle" class="flex-1 min-w-[140px] text-center font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/25 transition">
+            📥 Download MSIX
+          </a>
+          <a href="https://apps.microsoft.com/detail/9P4DFBGWGFF6?hl=en-us&gl=GB&ocid=pdpshare" target="_blank" class="text-xs font-semibold py-3 px-4 rounded-xl bg-white/10 hover:bg-white/15 text-gray-200 border border-white/10 transition">
+            MS Store
+          </a>
+          <a href="https://github.com/Viguru24/Video" target="_blank" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- App 3: CosmoWhisper Native -->
+      <div class="glass-card rounded-2xl p-7 flex flex-col justify-between border-t border-t-emerald-500/30">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-emerald-600/20 border border-emerald-500/30 flex items-center justify-center text-2xl">
+                🎙️
+              </div>
+              <div>
+                <h3 class="font-extrabold text-xl text-white">CosmoWhisper Native</h3>
+                <span class="text-xs font-mono text-emerald-400">macOS DMG & Windows Setup</span>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20">
+              100% Offline AI
+            </span>
+          </div>
+
+          <p class="text-gray-300 text-sm mb-5 leading-relaxed">
+            Native, private voice dictation and transcription powered by OpenAI Whisper models. Global push-to-talk hotkeys dictate speech directly into any application on your Mac or PC.
+          </p>
+
+          <div class="grid grid-cols-2 gap-2 text-xs text-gray-400 mb-6 font-mono">
+            <div class="flex items-center gap-1.5">🔒 Zero Cloud Audio</div>
+            <div class="flex items-center gap-1.5">⚡ Push-to-Talk</div>
+            <div class="flex items-center gap-1.5">🍎 Metal Accelerated</div>
+            <div class="flex items-center gap-1.5">🌍 99+ Languages</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
+          <a href="https://github.com/Viguru24/CosmoWhisper-Native/releases/download/v2.1.2-mac/CosmoWhisper_v2.1.2_macOS.dmg" class="flex-1 min-w-[120px] text-center font-bold text-xs uppercase tracking-wider py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-600/25 transition">
+            🍎 macOS DMG
+          </a>
+          <a href="https://github.com/Viguru24/CosmoWhisper-Downloads/releases/download/v2.2.18/CosmoWhisper-Setup-2.2.18.exe" class="flex-1 min-w-[120px] text-center font-bold text-xs uppercase tracking-wider py-3 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/25 transition">
+            🪟 Windows Setup
+          </a>
+          <a href="https://github.com/Viguru24/CosmoWhisper-Native" target="_blank" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- App 4: Vixz Desktop -->
+      <div class="glass-card rounded-2xl p-7 flex flex-col justify-between border-t border-t-amber-500/30">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-2xl">
+                🖥️
+              </div>
+              <div>
+                <h3 class="font-extrabold text-xl text-white">Vixz Desktop</h3>
+                <span class="text-xs font-mono text-amber-400">Windows MSIX • .NET 9 + WPF</span>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-semibold border border-amber-500/20">
+              New Release
+            </span>
+          </div>
+
+          <p class="text-gray-300 text-sm mb-5 leading-relaxed">
+            Glassmorphic Windows 11 desktop YouTube player with built-in voice assistant, SponsorBlock skipping, 1-click 1080p MP4 downloader, and always-on-top floating mini-player.
+          </p>
+
+          <div class="grid grid-cols-2 gap-2 text-xs text-gray-400 mb-6 font-mono">
+            <div class="flex items-center gap-1.5">🎨 Windows 11 Acrylic</div>
+            <div class="flex items-center gap-1.5">🛡️ SponsorBlock</div>
+            <div class="flex items-center gap-1.5">🤖 AI Summarizer</div>
+            <div class="flex items-center gap-1.5">⧉ Floating PiP</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
+          <a href="https://github.com/Viguru24/VixzDesktop/releases/download/v1.0.0/VixzDesktop-v1.0.0.msix" class="flex-1 min-w-[140px] text-center font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-white shadow-lg shadow-amber-600/25 transition">
+            📥 Download MSIX (64 MB)
+          </a>
+          <a href="https://github.com/Viguru24/VixzDesktop" target="_blank" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Feature Comparison Table -->
+  <section id="matrix" class="relative z-10 max-w-5xl mx-auto py-12 px-6">
+    <div class="glass-panel rounded-2xl p-6 sm:p-8">
+      <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Why Switch to Sovereign Apps?</h3>
+      <p class="text-sm text-gray-400 mb-6">Compare our native open-source applications against mainstream proprietary alternatives.</p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-white/10 text-gray-400 text-xs uppercase tracking-wider font-mono">
+              <th class="py-3 px-4">Application</th>
+              <th class="py-3 px-4">Commercial Competitor</th>
+              <th class="py-3 px-4">Typical Cost</th>
+              <th class="py-3 px-4 text-emerald-400 font-bold">Viguru24 Suite</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5 text-gray-300">
+            <tr>
+              <td class="py-4 px-4 font-semibold text-white">Vixz YouTube Player</td>
+              <td class="py-4 px-4 text-gray-400">YouTube Premium</td>
+              <td class="py-4 px-4 text-red-400">$13.99 / mo</td>
+              <td class="py-4 px-4 font-bold text-emerald-400">✅ 100% Free & SponsorBlock</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-4 font-semibold text-white">CosmoWhisper Native</td>
+              <td class="py-4 px-4 text-gray-400">Superwhisper / Wispr Flow</td>
+              <td class="py-4 px-4 text-red-400">$10 – $15 / mo</td>
+              <td class="py-4 px-4 font-bold text-emerald-400">✅ 100% On-Device & Free</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-4 font-semibold text-white">Kin-Tracker Radar</td>
+              <td class="py-4 px-4 text-gray-400">Life360 Gold</td>
+              <td class="py-4 px-4 text-red-400">$14.99 / mo + Data Sharing</td>
+              <td class="py-4 px-4 font-bold text-emerald-400">✅ Zero Data Brokers & Free</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-4 font-semibold text-white">Cosmo Symphony</td>
+              <td class="py-4 px-4 text-gray-400">Topaz Video AI / Adobe Tools</td>
+              <td class="py-4 px-4 text-red-400">$299+ / Subscriptions</td>
+              <td class="py-4 px-4 font-bold text-emerald-400">✅ GPU Rust Native & Local</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-white/5 py-12 px-6 text-center text-sm text-gray-500">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-lg bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-xs font-bold text-purple-300">
+          V
+        </div>
+        <span class="text-gray-400 font-medium">© 2026 Viguru24. Sovereign Open-Source Software.</span>
+      </div>
+      <div class="flex items-center gap-6 text-xs text-gray-400">
+        <a href="https://github.com/Viguru24" class="hover:text-white transition">GitHub</a>
+        <a href="https://github.com/Viguru24/YouTube" class="hover:text-white transition">Vixz Player</a>
+        <a href="https://github.com/Viguru24/Video" class="hover:text-white transition">Cosmo Symphony</a>
+        <a href="https://github.com/Viguru24/CosmoWhisper-Native" class="hover:text-white transition">CosmoWhisper</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

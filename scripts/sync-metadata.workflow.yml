@@ -1,0 +1,39 @@
+name: Sync Viguru24 Release Metadata & Sitemap
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout viguru24.github.io
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Sync latest GitHub release versions & structured data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: python scripts/sync_metadata.py --ping-indexnow
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git add -A
+            git commit -m "chore(seo): sync latest release versions and sitemap"
+            git push
+          else
+            echo "Metadata already up to date."
+          fi

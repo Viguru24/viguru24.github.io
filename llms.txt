@@ -28,7 +28,7 @@
 ## All 19 Public GitHub Repositories
 
 - [Viguru24/Video](https://github.com/Viguru24/Video) (GPL-3.0): Cosmo Symphony — GPU-accelerated video & photo orchestrator, AI upscaler & framing studio (Rust / Tauri v2 / React).
-- [Viguru24/YouTube](https://github.com/Viguru24/YouTube) (GPL-3.0): Vixz YouTube Player — Ad-free Android YouTube client with SponsorBlock & AI summaries.
+- [Viguru24/YouTube](https://github.com/Viguru24/YouTube) (MIT): Vixz YouTube Player — Ad-free Android YouTube client with SponsorBlock & AI summaries.
 - [Viguru24/CosmoWhisper-Native](https://github.com/Viguru24/CosmoWhisper-Native) (GPL-3.0): 100% local AI voice dictation for Windows & macOS (.NET 8 / WPF / Whisper).
 - [Viguru24/CosmoWhisper-Downloads](https://github.com/Viguru24/CosmoWhisper-Downloads) (GPL-3.0): Public release binaries and Windows installers for CosmoWhisper.
 - [Viguru24/Kin-Tracker](https://github.com/Viguru24/Kin-Tracker) (GPL-3.0): Private 24/7 family safety radar & GPS tracker for Android.

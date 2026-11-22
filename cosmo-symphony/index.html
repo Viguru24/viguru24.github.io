@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmo Symphony — GPU Media Orchestrator, AI 4K/8K Upscaler & Framing Studio | Viguru24</title>
+  <meta name="description" content="Cosmo Symphony (github.com/Viguru24/Video) is a free, open-source GPU-accelerated video & photo orchestrator, AI 4K/8K upscaler, museum framing studio, and local Wi-Fi phone-to-PC transfer suite built with Rust (Tauri v2) & React." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://viguru24.github.io/cosmo-symphony/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Viguru24 Sovereign Software Suite" />
+  <meta property="og:title" content="Cosmo Symphony — GPU Media Orchestrator, AI 4K/8K Upscaler & Framing Studio | Viguru24" />
+  <meta property="og:description" content="Cosmo Symphony (github.com/Viguru24/Video) is a free, open-source GPU-accelerated video & photo orchestrator, AI 4K/8K upscaler, museum framing studio, and local Wi-Fi phone-to-PC transfer suite built with Rust (Tauri v2) & React." />
+  <meta property="og:url" content="https://viguru24.github.io/cosmo-symphony/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cosmo Symphony — GPU Media Orchestrator, AI 4K/8K Upscaler & Framing Studio | Viguru24" />
+  <meta name="twitter:description" content="Cosmo Symphony (github.com/Viguru24/Video) is a free, open-source GPU-accelerated video & photo orchestrator, AI 4K/8K upscaler, museum framing studio, and local Wi-Fi phone-to-PC transfer suite built with Rust (Tauri v2) & React." />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Cosmo Symphony",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Windows 10, Windows 11, Android",
+      "softwareVersion": "1.4.15",
+      "license": "https://opensource.org/licenses/MIT",
+      "description": "GPU-accelerated video & photo orchestrator, hardwood framing studio, AI 4K/8K upscaler & local Wi-Fi phone-to-PC sharing built with Rust (Tauri v2) & React.",
+      "url": "https://viguru24.github.io/cosmo-symphony/",
+      "codeRepository": "https://github.com/Viguru24/Video",
+      "downloadUrl": "https://github.com/Viguru24/Video/releases/download/v1.4.15/Cosmo.Symphony_1.4.15.0.msixbundle",
+      "sameAs": [
+        "https://github.com/Viguru24/Video",
+        "https://apps.microsoft.com/detail/9P4DFBGWGFF6"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Louis De Souza",
+        "alternateName": "Viguru24",
+        "url": "https://github.com/Viguru24"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is the official Cosmo Symphony source repository?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cosmo Symphony is developed by Louis De Souza (Viguru24) and hosted openly on GitHub at https://github.com/Viguru24/Video under the MIT License."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Cosmo Symphony a free Topaz Video AI alternative on Windows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Cosmo Symphony is 100% free and open-source (MIT), performing local GPU upscaling, framing, and multi-video playback completely offline with zero subscriptions or telemetry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I transfer photos from my phone to Cosmo Symphony?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Install the CosmoShare Companion Android APK (v1.3.7) from the Viguru24/Video releases page to transfer media over your local Wi-Fi network directly to Windows."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #07090E;
+      color: #F3F4F6;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+    .glass-card {
+      background: rgba(18, 24, 38, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+    }
+    .glow-bg {
+      position: fixed;
+      width: 720px;
+      height: 720px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .glow-purple {
+      background: radial-gradient(circle, rgba(147, 51, 234, 0.16) 0%, rgba(147, 51, 234, 0) 70%);
+    }
+    .glow-blue {
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(37, 99, 235, 0) 70%);
+    }
+    .glow-red {
+      background: radial-gradient(circle, rgba(220, 38, 38, 0.12) 0%, rgba(220, 38, 38, 0) 70%);
+    }
+  </style>
+</head>
+<body class="relative min-h-screen selection:bg-purple-500 selection:text-white">
+  <div class="glow-bg glow-purple top-[-180px] left-[-180px]"></div>
+  <div class="glow-bg glow-blue top-[25%] right-[-180px]"></div>
+  <div class="glow-bg glow-red bottom-[-180px] left-[20%]"></div>
+
+  <nav class="sticky top-0 z-50 glass-panel border-b border-white/5 py-4 px-6 md:px-12 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-purple-600 via-indigo-500 to-pink-500 flex items-center justify-center font-bold text-lg shadow-lg shadow-purple-500/30">V</div>
+      <div>
+        <span class="font-extrabold text-lg tracking-tight text-white">Viguru24</span>
+        <span class="hidden sm:inline text-xs text-purple-400 font-mono ml-2 px-2 py-0.5 rounded-full bg-purple-500/10 border border-purple-500/20">Sovereign Suite</span>
+      </div>
+    </a>
+    <div class="flex items-center gap-4">
+      <a href="/cosmo-symphony/" class="hidden md:inline text-xs sm:text-sm text-white font-semibold transition">Cosmo Symphony</a><a href="/vixz/" class="hidden md:inline text-xs sm:text-sm text-gray-300 hover:text-white transition">Vixz</a><a href="/cosmowhisper/" class="hidden md:inline text-xs sm:text-sm text-gray-300 hover:text-white transition">CosmoWhisper</a><a href="/kin-tracker/" class="hidden md:inline text-xs sm:text-sm text-gray-300 hover:text-white transition">Kin-Tracker</a><a href="/cosmo-compendium/" class="hidden md:inline text-xs sm:text-sm text-gray-300 hover:text-white transition">Compendium</a>
+      <a href="https://github.com/Viguru24" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="relative z-10 max-w-5xl mx-auto px-6 py-16">
+    <div class="mb-6">
+      <a href="/" class="text-xs font-mono text-purple-300 hover:text-purple-200 transition">← Back to Viguru24 Sovereign Suite</a>
+    </div>
+
+    <header class="glass-panel rounded-3xl p-8 sm:p-10 mb-10 border-t border-t-blue-500/40">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-mono mb-5">
+        🌌 Windows MSIX v1.4.15 • Rust + Tauri v2 + React
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">Cosmo Symphony</h1>
+      <p class="text-base sm:text-lg text-gray-300 leading-relaxed max-w-3xl mb-8">A hardware-accelerated multi-media workspace and AI creative studio for Windows. Orchestrate dozens of 4K/8K videos and RAW photos concurrently, upscale locally on your GPU, design realistic hardwood museum frames, and sync files from Android over local Wi-Fi with zero cloud accounts.</p>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="https://github.com/Viguru24/Video/releases/download/v1.4.15/Cosmo.Symphony_1.4.15.0.msixbundle" class="font-bold text-xs uppercase tracking-wider py-3.5 px-5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/25 transition">📥 Download MSIX v1.4.15</a>
+        <a href="https://github.com/Viguru24/Video/releases/download/v1.4.0/CosmoShare-v1.3.7.apk" class="font-semibold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 transition">📱 CosmoShare APK v1.3.7</a>
+        <a href="https://apps.microsoft.com/detail/9P4DFBGWGFF6?hl=en-us&gl=GB&ocid=pdpshare" target="_blank" rel="noopener noreferrer" class="font-semibold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl bg-white/10 hover:bg-white/15 text-gray-200 border border-white/10 transition">Microsoft Store</a>
+        <a href="https://github.com/Viguru24/Video" target="_blank" rel="noopener noreferrer" class="font-semibold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 text-gray-200 border border-white/10 transition">GitHub: Viguru24/Video →</a>
+      </div>
+    </header>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-6">Core Architecture & Capabilities</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="glass-card rounded-2xl p-6">
+          <div class="text-2xl mb-2">🦀</div>
+          <h2 class="font-bold text-white text-lg mb-2">Rust & Tauri v2 Native Engine</h2>
+          <p class="text-sm text-gray-300 leading-relaxed">Ultra-lightweight desktop runtime combining native Rust concurrency with a hardware-accelerated React 18 interface and AV1 Solo Mode playback.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6">
+          <div class="text-2xl mb-2">🔍</div>
+          <h2 class="font-bold text-white text-lg mb-2">Local 4K/8K AI Upscaling</h2>
+          <p class="text-sm text-gray-300 leading-relaxed">Enhance photos and video frames directly on your own GPU—positioned as a sovereign, subscription-free alternative to Topaz Video AI and Adobe creative suites.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6">
+          <div class="text-2xl mb-2">🖼️</div>
+          <h2 class="font-bold text-white text-lg mb-2">Hardwood Museum Framing Studio</h2>
+          <p class="text-sm text-gray-300 leading-relaxed">Create realistic gallery mattes, wood-grain frames, portrait blur effects, and custom stickers without leaving your local workspace.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6">
+          <div class="text-2xl mb-2">📡</div>
+          <h2 class="font-bold text-white text-lg mb-2">CosmoShare Local Wi-Fi Sync</h2>
+          <p class="text-sm text-gray-300 leading-relaxed">Pair the CosmoShare Android companion app over local Wi-Fi for instant, zero-cloud phone-to-PC photo and video transfers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass-panel rounded-2xl p-7 sm:p-8 mb-12">
+      <h2 class="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-5">
+        <div class="border-b border-white/10 pb-4 last:border-b-0 last:pb-0">
+          <h3 class="font-semibold text-white text-base mb-1.5">Where is the official Cosmo Symphony source repository?</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">Cosmo Symphony is developed by Louis De Souza (Viguru24) and hosted openly on GitHub at https://github.com/Viguru24/Video under the MIT License.</p>
+        </div>
+        <div class="border-b border-white/10 pb-4 last:border-b-0 last:pb-0">
+          <h3 class="font-semibold text-white text-base mb-1.5">Is Cosmo Symphony a free Topaz Video AI alternative on Windows?</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">Yes. Cosmo Symphony is 100% free and open-source (MIT), performing local GPU upscaling, framing, and multi-video playback completely offline with zero subscriptions or telemetry.</p>
+        </div>
+        <div class="border-b border-white/10 pb-4 last:border-b-0 last:pb-0">
+          <h3 class="font-semibold text-white text-base mb-1.5">How do I transfer photos from my phone to Cosmo Symphony?</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">Install the CosmoShare Companion Android APK (v1.3.7) from the Viguru24/Video releases page to transfer media over your local Wi-Fi network directly to Windows.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative z-10 border-t border-white/5 py-12 px-6 text-center text-sm text-gray-500">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-lg bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-xs font-bold text-purple-300">V</div>
+        <span class="text-gray-400 font-medium">© 2026 Louis De Souza (Viguru24). Sovereign Open-Source Software.</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-5 text-xs text-gray-400">
+        <a href="/" class="hover:text-white transition">Home</a>
+        <a href="/cosmo-symphony/" class="hover:text-white transition">Cosmo Symphony</a>
+        <a href="/vixz/" class="hover:text-white transition">Vixz</a>
+        <a href="/cosmowhisper/" class="hover:text-white transition">CosmoWhisper</a>
+        <a href="/kin-tracker/" class="hover:text-white transition">Kin-Tracker</a>
+        <a href="/cosmo-compendium/" class="hover:text-white transition">Cosmo Compendium</a>
+        <a href="/llms.txt" class="hover:text-white transition">llms.txt</a>
+        <a href="/sitemap.xml" class="hover:text-white transition">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

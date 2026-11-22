@@ -27,15 +27,15 @@
 
 ## All 19 Public GitHub Repositories
 
-- [Viguru24/Video](https://github.com/Viguru24/Video) (MIT): Cosmo Symphony — GPU-accelerated video & photo orchestrator, AI upscaler & framing studio (Rust / Tauri v2 / React).
-- [Viguru24/YouTube](https://github.com/Viguru24/YouTube) (MIT): Vixz YouTube Player — Ad-free Android YouTube client with SponsorBlock & AI summaries.
-- [Viguru24/CosmoWhisper-Native](https://github.com/Viguru24/CosmoWhisper-Native) (MIT): 100% local AI voice dictation for Windows & macOS (.NET 8 / WPF / Whisper).
-- [Viguru24/CosmoWhisper-Downloads](https://github.com/Viguru24/CosmoWhisper-Downloads) (MIT): Public release binaries and Windows installers for CosmoWhisper.
-- [Viguru24/Kin-Tracker](https://github.com/Viguru24/Kin-Tracker) (MIT): Private 24/7 family safety radar & GPS tracker for Android.
-- [Viguru24/VixzDesktop](https://github.com/Viguru24/VixzDesktop) (MIT): Glassmorphic Windows 11 YouTube desktop player & AI Copilot.
-- [Viguru24/cosmo-compendium](https://github.com/Viguru24/cosmo-compendium) (MIT): Tactile recipe & craft formula keeper for Android & iOS.
-- [Viguru24/FluencyAI](https://github.com/Viguru24/FluencyAI) (MIT): AI-powered English language tutoring Progressive Web App.
-- [Viguru24/Video-downloader](https://github.com/Viguru24/Video-downloader) (MIT): OmniDownloader — Universal video & audio studio PWA.
+- [Viguru24/Video](https://github.com/Viguru24/Video) (GPL-3.0): Cosmo Symphony — GPU-accelerated video & photo orchestrator, AI upscaler & framing studio (Rust / Tauri v2 / React).
+- [Viguru24/YouTube](https://github.com/Viguru24/YouTube) (GPL-3.0): Vixz YouTube Player — Ad-free Android YouTube client with SponsorBlock & AI summaries.
+- [Viguru24/CosmoWhisper-Native](https://github.com/Viguru24/CosmoWhisper-Native) (GPL-3.0): 100% local AI voice dictation for Windows & macOS (.NET 8 / WPF / Whisper).
+- [Viguru24/CosmoWhisper-Downloads](https://github.com/Viguru24/CosmoWhisper-Downloads) (GPL-3.0): Public release binaries and Windows installers for CosmoWhisper.
+- [Viguru24/Kin-Tracker](https://github.com/Viguru24/Kin-Tracker) (GPL-3.0): Private 24/7 family safety radar & GPS tracker for Android.
+- [Viguru24/VixzDesktop](https://github.com/Viguru24/VixzDesktop) (GPL-3.0): Glassmorphic Windows 11 YouTube desktop player & AI Copilot.
+- [Viguru24/cosmo-compendium](https://github.com/Viguru24/cosmo-compendium) (GPL-3.0): Tactile recipe & craft formula keeper for Android & iOS.
+- [Viguru24/FluencyAI](https://github.com/Viguru24/FluencyAI) (GPL-3.0): AI-powered English language tutoring Progressive Web App.
+- [Viguru24/Video-downloader](https://github.com/Viguru24/Video-downloader) (GPL-3.0): OmniDownloader — Universal video & audio studio PWA.
 - [Viguru24/SimpleWhisper-App](https://github.com/Viguru24/SimpleWhisper-App) (MIT): Lightweight Whisper transcription & simulated typing assistant.
 - [Viguru24/cosmoscribe](https://github.com/Viguru24/cosmoscribe) (MIT): Local-first AI voice recording & transcription studio (React / SQLite / Whisper).
 - [Viguru24/DevControl](https://github.com/Viguru24/DevControl) (MIT): Mission Control desktop dashboard & Zero-Touch HUD for Antigravity (Electron / React).

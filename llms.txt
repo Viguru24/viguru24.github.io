@@ -1,0 +1,48 @@
+# Viguru24 — Sovereign & Native Software Suite
+
+> Independent open-source software portfolio by Louis De Souza (GitHub: Viguru24). High-performance, privacy-first native applications for Android, Windows, macOS, and the Web with zero cloud subscriptions or telemetry.
+
+- **Showcase Portal:** https://viguru24.github.io/
+- **GitHub Profile:** https://github.com/Viguru24
+- **Sitemap:** https://viguru24.github.io/sitemap.xml
+
+## Dedicated App Guides
+
+- [Cosmo Symphony](https://viguru24.github.io/cosmo-symphony/): GPU-accelerated video & photo orchestrator, hardwood framing studio, AI 4K/8K upscaler & local Wi-Fi phone-to-PC sharing built with Rust (Tauri v2) & React.
+- [Vixz YouTube Player & Desktop](https://viguru24.github.io/vixz/): Ad-free YouTube clients for Android (Kotlin / Jetpack Compose / ExoPlayer) and Windows 11 (.NET 9 / WPF) with SponsorBlock, Gemini AI summaries, and offline downloads.
+- [CosmoWhisper Native](https://viguru24.github.io/cosmowhisper/): 100% local, offline AI voice dictation and transcription for Windows & macOS powered by OpenAI Whisper (official site: https://cosmowhisper.com).
+- [Kin-Tracker](https://viguru24.github.io/kin-tracker/): Privacy-first 24/7 family safety radar & GPS transit network for Android built with OpenStreetMap (Life360 alternative).
+- [Cosmo Compendium](https://viguru24.github.io/cosmo-compendium/): Smart tactile recipe & craft formula keeper for Android & iOS with AI scanning & Cook Mode.
+
+## Verified Latest Releases
+
+- **Cosmo Symphony Windows MSIX (v1.4.15):** https://github.com/Viguru24/Video/releases/download/v1.4.15/Cosmo.Symphony_1.4.15.0.msixbundle
+- **Cosmo Symphony Microsoft Store:** https://apps.microsoft.com/detail/9P4DFBGWGFF6?hl=en-us&gl=GB&ocid=pdpshare
+- **CosmoShare Companion Android APK (v1.3.7):** https://github.com/Viguru24/Video/releases/download/v1.4.0/CosmoShare-v1.3.7.apk
+- **Vixz YouTube Player Android APK (v2.2.2):** https://github.com/Viguru24/YouTube/releases/download/v2.2.2/Vixz-YouTube-Player-v2.2.2.apk
+- **Vixz Desktop Windows MSIX (v1.0.0):** https://github.com/Viguru24/VixzDesktop/releases/download/v1.0.0/VixzDesktop-v1.0.0.msix
+- **CosmoWhisper Windows Setup (v2.2.18):** https://github.com/Viguru24/CosmoWhisper-Downloads/releases/download/v2.2.18/CosmoWhisper-Setup-2.2.18.exe
+- **CosmoWhisper macOS DMG (v2.1.2-mac):** https://github.com/Viguru24/CosmoWhisper-Native/releases/download/v2.1.2-mac/CosmoWhisper_v2.1.2_macOS.dmg
+- **Kin-Tracker Android APK (v2.8.1):** https://github.com/Viguru24/Kin-Tracker/releases/download/v2.8.1/KinTracker-v2.8.1.apk
+
+## All 19 Public GitHub Repositories
+
+- [Viguru24/Video](https://github.com/Viguru24/Video) (MIT): Cosmo Symphony — GPU-accelerated video & photo orchestrator, AI upscaler & framing studio (Rust / Tauri v2 / React).
+- [Viguru24/YouTube](https://github.com/Viguru24/YouTube) (MIT): Vixz YouTube Player — Ad-free Android YouTube client with SponsorBlock & AI summaries.
+- [Viguru24/CosmoWhisper-Native](https://github.com/Viguru24/CosmoWhisper-Native) (MIT): 100% local AI voice dictation for Windows & macOS (.NET 8 / WPF / Whisper).
+- [Viguru24/CosmoWhisper-Downloads](https://github.com/Viguru24/CosmoWhisper-Downloads) (MIT): Public release binaries and Windows installers for CosmoWhisper.
+- [Viguru24/Kin-Tracker](https://github.com/Viguru24/Kin-Tracker) (MIT): Private 24/7 family safety radar & GPS tracker for Android.
+- [Viguru24/VixzDesktop](https://github.com/Viguru24/VixzDesktop) (MIT): Glassmorphic Windows 11 YouTube desktop player & AI Copilot.
+- [Viguru24/cosmo-compendium](https://github.com/Viguru24/cosmo-compendium) (MIT): Tactile recipe & craft formula keeper for Android & iOS.
+- [Viguru24/FluencyAI](https://github.com/Viguru24/FluencyAI) (MIT): AI-powered English language tutoring Progressive Web App.
+- [Viguru24/Video-downloader](https://github.com/Viguru24/Video-downloader) (MIT): OmniDownloader — Universal video & audio studio PWA.
+- [Viguru24/SimpleWhisper-App](https://github.com/Viguru24/SimpleWhisper-App) (MIT): Lightweight Whisper transcription & simulated typing assistant.
+- [Viguru24/cosmoscribe](https://github.com/Viguru24/cosmoscribe) (MIT): Local-first AI voice recording & transcription studio (React / SQLite / Whisper).
+- [Viguru24/DevControl](https://github.com/Viguru24/DevControl) (MIT): Mission Control desktop dashboard & Zero-Touch HUD for Antigravity (Electron / React).
+- [Viguru24/Antigravity](https://github.com/Viguru24/Antigravity) (MIT): Sovereign AI workspace & developer utilities.
+- [Viguru24/Viguru24](https://github.com/Viguru24/Viguru24) (MIT): GitHub profile showcase & Quick Download Hub.
+- [Viguru24/viguru24.github.io](https://github.com/Viguru24/viguru24.github.io) (MIT): Viguru24 Sovereign Software Suite Showcase Portal.
+- [Viguru24/Curriculum-Vitae](https://github.com/Viguru24/Curriculum-Vitae): Louis De Souza — Curriculum Vitae.
+- [Viguru24/rotary-club-website](https://github.com/Viguru24/rotary-club-website): Rotary Club of Caterham website & Easter Bunny Fun Run platform.
+- [Viguru24/queen-of-clean-demo](https://github.com/Viguru24/queen-of-clean-demo): Queen of Clean London cleaning website showcase.
+- [Viguru24/multigravity-pro](https://github.com/Viguru24/multigravity-pro): Multi-profile Antigravity IDE runner (fork).

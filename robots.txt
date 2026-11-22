@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viguru24.github.io/sitemap.xml

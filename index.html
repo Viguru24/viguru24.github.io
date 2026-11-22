@@ -3,14 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viguru24 • Sovereign & Native Software Suite</title>
-  <meta name="description" content="High-performance, privacy-first, GPU-accelerated applications for Android, Windows, and macOS. Vixz YouTube Player, Cosmo Symphony, CosmoWhisper, and Kin-Tracker." />
-  
+  <title>Viguru24 • Sovereign & Native Software Suite (Cosmo Symphony, Vixz, CosmoWhisper, Kin-Tracker)</title>
+  <meta name="description" content="High-performance, privacy-first, GPU-accelerated native applications by Viguru24 (Louis De Souza) for Android, Windows, and macOS: Cosmo Symphony, Vixz YouTube Player, CosmoWhisper Native, Kin-Tracker, and Vixz Desktop." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://viguru24.github.io/" />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Viguru24 Sovereign Software Suite" />
+  <meta property="og:title" content="Viguru24 • Sovereign & Native Software Suite" />
+  <meta property="og:description" content="Privacy-first, GPU-accelerated native applications for Android, Windows, and macOS: Cosmo Symphony, Vixz YouTube Player, CosmoWhisper Native, and Kin-Tracker." />
+  <meta property="og:url" content="https://viguru24.github.io/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Viguru24 • Sovereign & Native Software Suite" />
+  <meta name="twitter:description" content="High-performance native apps with zero cloud subscriptions: Cosmo Symphony, Vixz YouTube Player, CosmoWhisper Native, and Kin-Tracker." />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://viguru24.github.io/#person",
+        "name": "Louis De Souza",
+        "alternateName": "Viguru24",
+        "url": "https://viguru24.github.io/",
+        "sameAs": [
+          "https://github.com/Viguru24",
+          "https://cosmowhisper.com"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://viguru24.github.io/#website",
+        "name": "Viguru24 Sovereign Software Suite",
+        "url": "https://viguru24.github.io/",
+        "publisher": { "@id": "https://viguru24.github.io/#person" }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://viguru24.github.io/#software-suite",
+        "name": "Viguru24 Open-Source Software Portfolio",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Cosmo Symphony",
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "Windows 10, Windows 11, Android",
+              "softwareVersion": "1.4.15",
+              "description": "GPU-accelerated video & photo orchestrator, hardwood framing studio, AI 4K/8K upscaler & local Wi-Fi phone-to-PC sharing built with Rust (Tauri v2) & React.",
+              "url": "https://github.com/Viguru24/Video",
+              "downloadUrl": "https://github.com/Viguru24/Video/releases/download/v1.4.15/Cosmo.Symphony_1.4.15.0.msixbundle",
+              "sameAs": [
+                "https://github.com/Viguru24/Video",
+                "https://apps.microsoft.com/detail/9P4DFBGWGFF6"
+              ],
+              "author": { "@id": "https://viguru24.github.io/#person" },
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Vixz YouTube Player",
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "Android",
+              "softwareVersion": "2.2.2",
+              "description": "High-performance, ad-free YouTube player for Android built with Jetpack Compose & ExoPlayer with SponsorBlock, AI summaries, offline downloads, and PiP.",
+              "url": "https://github.com/Viguru24/YouTube",
+              "downloadUrl": "https://github.com/Viguru24/YouTube/releases/download/v2.2.2/Vixz-YouTube-Player-v2.2.2.apk",
+              "sameAs": "https://github.com/Viguru24/YouTube",
+              "author": { "@id": "https://viguru24.github.io/#person" },
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "CosmoWhisper Native",
+              "applicationCategory": "UtilitiesApplication",
+              "operatingSystem": "Windows, macOS",
+              "softwareVersion": "2.2.18",
+              "description": "100% local AI voice dictation & transcription client powered by OpenAI Whisper with global push-to-talk.",
+              "url": "https://github.com/Viguru24/CosmoWhisper-Native",
+              "downloadUrl": "https://github.com/Viguru24/CosmoWhisper-Downloads/releases/download/v2.2.18/CosmoWhisper-Setup-2.2.18.exe",
+              "sameAs": [
+                "https://github.com/Viguru24/CosmoWhisper-Native",
+                "https://cosmowhisper.com"
+              ],
+              "author": { "@id": "https://viguru24.github.io/#person" },
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Kin-Tracker",
+              "applicationCategory": "NavigationApplication",
+              "operatingSystem": "Android",
+              "softwareVersion": "2.8.1",
+              "description": "Private, 24/7 real-time family safety radar & GPS transit network for Android (privacy-first Life360 alternative).",
+              "url": "https://github.com/Viguru24/Kin-Tracker",
+              "downloadUrl": "https://github.com/Viguru24/Kin-Tracker/releases/download/v2.8.1/KinTracker-v2.8.1.apk",
+              "sameAs": "https://github.com/Viguru24/Kin-Tracker",
+              "author": { "@id": "https://viguru24.github.io/#person" },
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Vixz Desktop",
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "Windows 10, Windows 11",
+              "softwareVersion": "1.0.0",
+              "description": "Glassmorphic Windows 11 desktop YouTube player with SponsorBlock, AI summaries, and floating mini-player.",
+              "url": "https://github.com/Viguru24/VixzDesktop",
+              "downloadUrl": "https://github.com/Viguru24/VixzDesktop/releases/download/v1.0.0/VixzDesktop-v1.0.0.msix",
+              "sameAs": "https://github.com/Viguru24/VixzDesktop",
+              "author": { "@id": "https://viguru24.github.io/#person" },
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Cosmo Compendium",
+              "applicationCategory": "LifestyleApplication",
+              "operatingSystem": "Android, iOS",
+              "description": "Smart tactile recipe & craft formula keeper with AI scanning and Cook Mode.",
+              "url": "https://github.com/Viguru24/cosmo-compendium",
+              "sameAs": "https://github.com/Viguru24/cosmo-compendium",
+              "author": { "@id": "https://viguru24.github.io/#person" },
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "OmniDownloader",
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "Web, Windows, Linux",
+              "description": "Universal video & audio studio Progressive Web App with glassmorphic UI and fast local media downloads.",
+              "url": "https://github.com/Viguru24/Video-downloader",
+              "sameAs": "https://github.com/Viguru24/Video-downloader",
+              "author": { "@id": "https://viguru24.github.io/#person" },
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "FluencyAI",
+              "applicationCategory": "EducationalApplication",
+              "operatingSystem": "Web",
+              "description": "AI-powered English language tutoring Progressive Web App with interactive roleplay, daily lessons, and voice immersion.",
+              "url": "https://github.com/Viguru24/FluencyAI",
+              "sameAs": "https://github.com/Viguru24/FluencyAI",
+              "author": { "@id": "https://viguru24.github.io/#person" },
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -43,23 +227,19 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
-    
+
     .glass-panel {
-      background: rgba(15, 23, 42, 0.65);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: rgba(15, 23, 42, 0.72);
       border: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     }
-    
+
     .glass-card {
-      background: rgba(18, 24, 38, 0.6);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(18, 24, 38, 0.72);
       border: 1px solid rgba(255, 255, 255, 0.07);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
     }
-    
+
     .glass-card:hover {
       transform: translateY(-4px);
       border-color: rgba(255, 255, 255, 0.18);
@@ -68,33 +248,32 @@
 
     .glow-bg {
       position: fixed;
-      width: 600px;
-      height: 600px;
+      width: 720px;
+      height: 720px;
       border-radius: 50%;
-      filter: blur(120px);
-      opacity: 0.15;
       pointer-events: none;
       z-index: 0;
     }
 
-    .shimmer {
-      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0) 100%);
-      background-size: 200% 100%;
-      animation: shimmer 3s infinite;
+    .glow-purple {
+      background: radial-gradient(circle, rgba(147, 51, 234, 0.16) 0%, rgba(147, 51, 234, 0) 70%);
     }
 
-    @keyframes shimmer {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
+    .glow-blue {
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(37, 99, 235, 0) 70%);
+    }
+
+    .glow-red {
+      background: radial-gradient(circle, rgba(220, 38, 38, 0.12) 0%, rgba(220, 38, 38, 0) 70%);
     }
   </style>
 </head>
 <body class="relative min-h-screen selection:bg-purple-500 selection:text-white">
 
-  <!-- Ambient Background Glows -->
-  <div class="glow-bg bg-purple-600 top-[-100px] left-[-100px]"></div>
-  <div class="glow-bg bg-blue-600 top-[30%] right-[-100px]"></div>
-  <div class="glow-bg bg-red-600 bottom-[-100px] left-[20%]"></div>
+  <!-- Static GPU-free Radial Ambient Glows (0% Idle CPU) -->
+  <div class="glow-bg glow-purple top-[-180px] left-[-180px]"></div>
+  <div class="glow-bg glow-blue top-[25%] right-[-180px]"></div>
+  <div class="glow-bg glow-red bottom-[-180px] left-[20%]"></div>
 
   <!-- Top Navigation -->
   <nav class="sticky top-0 z-50 glass-panel border-b border-white/5 py-4 px-6 md:px-12 flex items-center justify-between">
@@ -110,9 +289,10 @@
 
     <div class="flex items-center gap-4">
       <a href="#apps" class="text-sm font-medium text-gray-300 hover:text-white transition">Apps</a>
+      <a href="#repositories" class="hidden sm:inline text-sm font-medium text-gray-300 hover:text-white transition">Repositories</a>
       <a href="#matrix" class="hidden sm:inline text-sm font-medium text-gray-300 hover:text-white transition">Comparison</a>
-      <a href="https://github.com/Viguru24" target="_blank" class="flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition">
-        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      <a href="https://github.com/Viguru24" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         <span>GitHub Profile</span>
       </a>
     </div>
@@ -121,7 +301,7 @@
   <!-- Hero Section -->
   <header class="relative z-10 max-w-5xl mx-auto pt-20 pb-16 px-6 text-center">
     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 border border-purple-500/30 text-purple-300 text-xs font-semibold uppercase tracking-wider mb-6">
-      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
       100% Free • Open Source • Privacy-First
     </div>
 
@@ -140,7 +320,7 @@
       <a href="#apps" class="px-8 py-3.5 rounded-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white shadow-xl shadow-purple-600/30 transition transform hover:-translate-y-0.5">
         Explore Apps & Downloads
       </a>
-      <a href="https://github.com/Viguru24" target="_blank" class="px-8 py-3.5 rounded-xl font-semibold bg-white/5 hover:bg-white/10 border border-white/10 text-gray-200 transition">
+      <a href="https://github.com/Viguru24" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-xl font-semibold bg-white/5 hover:bg-white/10 border border-white/10 text-gray-200 transition">
         View on GitHub
       </a>
     </div>
@@ -167,7 +347,7 @@
               </div>
               <div>
                 <h3 class="font-extrabold text-xl text-white">Vixz YouTube Player</h3>
-                <span class="text-xs font-mono text-red-400">Android APK • v1.9.6</span>
+                <span class="text-xs font-mono text-red-400">Android APK • v2.2.2</span>
               </div>
             </div>
             <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20">
@@ -188,14 +368,14 @@
         </div>
 
         <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
-          <a href="https://github.com/Viguru24/YouTube/releases/download/v1.9.6/Vixz-YouTube-Player-v1.9.6.apk" class="flex-1 min-w-[140px] text-center font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl bg-red-600 hover:bg-red-500 text-white shadow-lg shadow-red-600/25 transition">
-            📥 Download APK (31 MB)
+          <a href="https://github.com/Viguru24/YouTube/releases/download/v2.2.2/Vixz-YouTube-Player-v2.2.2.apk" class="flex-1 min-w-[140px] text-center font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl bg-red-600 hover:bg-red-500 text-white shadow-lg shadow-red-600/25 transition">
+            📥 Download APK v2.2.2
           </a>
-          <a href="https://apps.obtainium.imranr.dev/add?r=https://github.com/Viguru24/YouTube" class="text-xs font-semibold py-3 px-4 rounded-xl bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 border border-purple-500/30 transition">
+          <a href="https://apps.obtainium.imranr.dev/add?r=https://github.com/Viguru24/YouTube" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold py-3 px-4 rounded-xl bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 border border-purple-500/30 transition">
             ⚡ Obtainium Auto-Update
           </a>
-          <a href="https://github.com/Viguru24/YouTube" target="_blank" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <a href="https://github.com/Viguru24/YouTube" target="_blank" rel="noopener noreferrer" aria-label="Vixz YouTube Player GitHub Repository" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           </a>
         </div>
       </div>
@@ -210,7 +390,7 @@
               </div>
               <div>
                 <h3 class="font-extrabold text-xl text-white">Cosmo Symphony</h3>
-                <span class="text-xs font-mono text-blue-400">Windows MSIX • Rust + Tauri v2</span>
+                <span class="text-xs font-mono text-blue-400">Windows MSIX v1.4.15 • Rust + Tauri v2</span>
               </div>
             </div>
             <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-semibold border border-blue-500/20">
@@ -231,14 +411,17 @@
         </div>
 
         <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
-          <a href="https://github.com/Viguru24/Video/releases/download/v1.4.0/Cosmo.Symphony_1.4.0.0.msixbundle" class="flex-1 min-w-[140px] text-center font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/25 transition">
-            📥 Download MSIX
+          <a href="https://github.com/Viguru24/Video/releases/download/v1.4.15/Cosmo.Symphony_1.4.15.0.msixbundle" class="flex-1 min-w-[140px] text-center font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/25 transition">
+            📥 Download MSIX v1.4.15
           </a>
-          <a href="https://apps.microsoft.com/detail/9P4DFBGWGFF6?hl=en-us&gl=GB&ocid=pdpshare" target="_blank" class="text-xs font-semibold py-3 px-4 rounded-xl bg-white/10 hover:bg-white/15 text-gray-200 border border-white/10 transition">
+          <a href="https://github.com/Viguru24/Video/releases/download/v1.4.0/CosmoShare-v1.3.7.apk" class="text-xs font-semibold py-3 px-3 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 transition">
+            📱 Companion APK
+          </a>
+          <a href="https://apps.microsoft.com/detail/9P4DFBGWGFF6?hl=en-us&gl=GB&ocid=pdpshare" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold py-3 px-3 rounded-xl bg-white/10 hover:bg-white/15 text-gray-200 border border-white/10 transition">
             MS Store
           </a>
-          <a href="https://github.com/Viguru24/Video" target="_blank" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <a href="https://github.com/Viguru24/Video" target="_blank" rel="noopener noreferrer" aria-label="Cosmo Symphony GitHub Repository" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           </a>
         </div>
       </div>
@@ -274,10 +457,10 @@
         </div>
 
         <div class="flex items-center gap-2 mb-3">
-          <a href="https://cosmowhisper.com" target="_blank" class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 transition flex items-center justify-center gap-1.5">
+          <a href="https://cosmowhisper.com" target="_blank" rel="noopener noreferrer" class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 transition flex items-center justify-center gap-1.5">
             🌐 Visit CosmoWhisper.com
           </a>
-          <a href="https://cosmowhisper.com/#reviews" target="_blank" class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 transition flex items-center justify-center gap-1.5">
+          <a href="https://cosmowhisper.com/#reviews" target="_blank" rel="noopener noreferrer" class="flex-1 text-center text-xs font-semibold py-2 px-3 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 transition flex items-center justify-center gap-1.5">
             ⭐ Leave a Review
           </a>
         </div>
@@ -289,8 +472,8 @@
           <a href="https://github.com/Viguru24/CosmoWhisper-Downloads/releases/download/v2.2.18/CosmoWhisper-Setup-2.2.18.exe" class="flex-1 min-w-[120px] text-center font-bold text-xs uppercase tracking-wider py-3 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/25 transition">
             🪟 Windows Setup
           </a>
-          <a href="https://github.com/Viguru24/CosmoWhisper-Native" target="_blank" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <a href="https://github.com/Viguru24/CosmoWhisper-Native" target="_blank" rel="noopener noreferrer" aria-label="CosmoWhisper Native GitHub Repository" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           </a>
         </div>
       </div>
@@ -309,7 +492,7 @@
               </div>
             </div>
             <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-semibold border border-amber-500/20">
-              New Release
+              Windows 11
             </span>
           </div>
 
@@ -327,14 +510,131 @@
 
         <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
           <a href="https://github.com/Viguru24/VixzDesktop/releases/download/v1.0.0/VixzDesktop-v1.0.0.msix" class="flex-1 min-w-[140px] text-center font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-white shadow-lg shadow-amber-600/25 transition">
-            📥 Download MSIX (64 MB)
+            📥 Download MSIX v1.0.0
           </a>
-          <a href="https://github.com/Viguru24/VixzDesktop" target="_blank" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <a href="https://github.com/Viguru24/VixzDesktop" target="_blank" rel="noopener noreferrer" aria-label="Vixz Desktop GitHub Repository" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           </a>
         </div>
       </div>
 
+      <!-- App 5: Kin-Tracker -->
+      <div class="glass-card rounded-2xl p-7 flex flex-col justify-between border-t border-t-cyan-500/30 md:col-span-2">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="flex-1">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-cyan-600/20 border border-cyan-500/30 flex items-center justify-center text-2xl">
+                  🛰️
+                </div>
+                <div>
+                  <h3 class="font-extrabold text-xl text-white">Kin-Tracker</h3>
+                  <span class="text-xs font-mono text-cyan-400">Android APK v2.8.1 • Jetpack Compose + OSM</span>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold border border-cyan-500/20">
+                Privacy Radar
+              </span>
+            </div>
+
+            <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+              Next-gen private, 24/7 real-time family safety radar & GPS transit network for Android. A zero-data-broker Life360 alternative with smart battery geofencing, arrival/departure triggers, and OpenStreetMap maps.
+            </p>
+
+            <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-mono">
+              <span>🛡️ Zero Data Brokers</span>
+              <span>🔋 Adaptive GPS Battery</span>
+              <span>🚨 Instant Geofence Alerts</span>
+              <span>🗺️ OpenStreetMap Native</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 md:flex-col md:items-stretch md:min-w-[230px]">
+            <a href="https://github.com/Viguru24/Kin-Tracker/releases/download/v2.8.1/KinTracker-v2.8.1.apk" class="flex-1 text-center font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white shadow-lg shadow-cyan-600/25 transition">
+              📥 Download APK v2.8.1
+            </a>
+            <div class="flex items-center gap-2">
+              <a href="https://github.com/Viguru24/Kin-Tracker/releases/latest" target="_blank" rel="noopener noreferrer" class="flex-1 text-center text-xs font-semibold py-3 px-4 rounded-xl bg-white/10 hover:bg-white/15 text-gray-200 border border-white/10 transition">
+                Releases
+              </a>
+              <a href="https://github.com/Viguru24/Kin-Tracker" target="_blank" rel="noopener noreferrer" aria-label="Kin-Tracker GitHub Repository" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 transition">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- All Open-Source Repositories Directory -->
+  <section id="repositories" class="relative z-10 max-w-6xl mx-auto py-8 px-6">
+    <div class="glass-panel rounded-2xl p-6 sm:p-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white">All Open-Source Repositories</h2>
+          <p class="text-sm text-gray-400">Complete public directory across mobile, desktop, AI tooling, and web projects.</p>
+        </div>
+        <a href="https://github.com/Viguru24?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-purple-300 hover:text-purple-200 transition">
+          Browse all on GitHub →
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+        <a href="https://github.com/Viguru24/cosmo-compendium" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">📖 Cosmo Compendium</div>
+          <p class="text-xs text-gray-400 mt-1">Smart tactile recipe & craft formula keeper for Android & iOS with AI scanning & Cook Mode.</p>
+        </a>
+        <a href="https://github.com/Viguru24/FluencyAI" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">🗣️ FluencyAI</div>
+          <p class="text-xs text-gray-400 mt-1">AI-powered English tutoring PWA with interactive roleplay, daily lessons & voice immersion.</p>
+        </a>
+        <a href="https://github.com/Viguru24/Video-downloader" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">🌌 OmniDownloader</div>
+          <p class="text-xs text-gray-400 mt-1">Universal video & audio studio PWA with glassmorphic UI and fast local media downloads.</p>
+        </a>
+        <a href="https://github.com/Viguru24/DevControl" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">🎛️ DevControl</div>
+          <p class="text-xs text-gray-400 mt-1">Mission Control desktop dashboard & floating widget for Antigravity AI agents.</p>
+        </a>
+        <a href="https://github.com/Viguru24/cosmoscribe" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">✍️ CosmoScribe</div>
+          <p class="text-xs text-gray-400 mt-1">Local-first AI voice recording, transcription & note studio using React, SQLite & Whisper.</p>
+        </a>
+        <a href="https://github.com/Viguru24/SimpleWhisper-App" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">🎙️ SimpleWhisper</div>
+          <p class="text-xs text-gray-400 mt-1">Lightweight private Whisper voice transcription & simulated typing assistant.</p>
+        </a>
+        <a href="https://github.com/Viguru24/CosmoWhisper-Downloads" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">📦 CosmoWhisper Releases</div>
+          <p class="text-xs text-gray-400 mt-1">Official public release binaries and Windows installers for CosmoWhisper.</p>
+        </a>
+        <a href="https://github.com/Viguru24/Curriculum-Vitae" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">📄 Curriculum Vitae</div>
+          <p class="text-xs text-gray-400 mt-1">Louis De Souza — Senior Network Analyst & Principal Systems Architect (UK).</p>
+        </a>
+        <a href="https://github.com/Viguru24/rotary-club-website" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">🎗️ Rotary Club of Caterham</div>
+          <p class="text-xs text-gray-400 mt-1">Community club website & Easter Bunny Fun Run event management platform.</p>
+        </a>
+        <a href="https://github.com/Viguru24/queen-of-clean-demo" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">✨ Queen of Clean London</div>
+          <p class="text-xs text-gray-400 mt-1">Website showcase & service booking interface for residential & commercial cleaning.</p>
+        </a>
+        <a href="https://github.com/Viguru24/Antigravity" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">🚀 Antigravity</div>
+          <p class="text-xs text-gray-400 mt-1">Sovereign AI workspace, developer utilities & automation experiments.</p>
+        </a>
+        <a href="https://github.com/Viguru24/multigravity-pro" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">⚡ MultiGravity Pro</div>
+          <p class="text-xs text-gray-400 mt-1">Run multiple Antigravity IDE profiles simultaneously with isolated settings.</p>
+        </a>
+        <a href="https://github.com/Viguru24/Viguru24" target="_blank" rel="noopener noreferrer" class="glass-card rounded-xl p-4 block">
+          <div class="font-bold text-white">👤 Viguru24 Profile</div>
+          <p class="text-xs text-gray-400 mt-1">GitHub profile README, Quick Download Hub & Sovereign Software Suite overview.</p>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -387,18 +687,21 @@
 
   <!-- Footer -->
   <footer class="relative z-10 border-t border-white/5 py-12 px-6 text-center text-sm text-gray-500">
-    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2">
         <div class="w-6 h-6 rounded-lg bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-xs font-bold text-purple-300">
           V
         </div>
         <span class="text-gray-400 font-medium">© 2026 Viguru24. Sovereign Open-Source Software.</span>
       </div>
-      <div class="flex items-center gap-6 text-xs text-gray-400">
+      <div class="flex flex-wrap items-center justify-center gap-5 text-xs text-gray-400">
         <a href="https://github.com/Viguru24" class="hover:text-white transition">GitHub</a>
         <a href="https://github.com/Viguru24/YouTube" class="hover:text-white transition">Vixz Player</a>
         <a href="https://github.com/Viguru24/Video" class="hover:text-white transition">Cosmo Symphony</a>
         <a href="https://github.com/Viguru24/CosmoWhisper-Native" class="hover:text-white transition">CosmoWhisper</a>
+        <a href="https://github.com/Viguru24/Kin-Tracker" class="hover:text-white transition">Kin-Tracker</a>
+        <a href="https://github.com/Viguru24/cosmo-compendium" class="hover:text-white transition">Cosmo Compendium</a>
+        <a href="/sitemap.xml" class="hover:text-white transition">Sitemap</a>
       </div>
     </div>
   </footer>
